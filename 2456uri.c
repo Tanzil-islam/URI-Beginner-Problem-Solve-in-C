@@ -1,39 +1,26 @@
 #include<stdio.h>
+
 int main()
 {
-    int card[5];
-    int c=0,c1=0,c2=0;
-
-    for(int i=0; i<5 ;i++)
-    {
-        scanf("%d",&card[i]);
-    }
-    for(int i=1 ; i<4; i++)
-    {
-        if(card[i]<card[i+1]&&card[i-1]<card[i])
+    int a,b,c,d,e;
+    scanf("%d%d%d%d%d",&a,&b,&c,&d,&e);
+        if(a<b&& b<c && c<d && d<e)
         {
-            c++;
-        }
-
-        else if(card[i]>card[i+1]&&card[i-1]>card[i])
-        {
-            c1++;
-        }
-        else
-        {
-            c2=3;
-            break;
-        }
 
 
-        }
-        if(c==3)
-            printf("C\n");
-        else if(c1==3)
-            printf("D\n");
-        else if(c2==3){
-          printf("N\n");
-        }
+        printf("C\n");
 
     }
+    else if(a>b && b>c && c>d && d>e)
+    {
 
+
+        printf("D\n");
+
+    }
+    else
+    {
+        printf("N\n");
+    }
+    return 0;
+}
